@@ -49,7 +49,7 @@ We will deploy  Apache Airflow on our cluster
 
 ![airflow-finsihed](/airflow-done.png)
 
-## Verify Apache installation
+## Verify Apache Airflow installation
 
 * Go to [Resources] in your browser 
 * Click on **Clusters**
