@@ -26,7 +26,9 @@ We will deploy  Apache Airflow on our cluster
 * Give a unique **name** to workspace , which you can easily recognize
 ![Name](/details-name.png)
 * Select which resource group you want to use , it's for access controll and billing purposes. For more information please visit [resource groups]
+
 ![apache-resource](/details-resource.png)
+
 * Give **tags** to your apache workspace , for more information visit [tags]
 
 ![apache-tags](/details-tags.png)
@@ -41,11 +43,11 @@ We will deploy  Apache Airflow on our cluster
 
 * The apache workspace will start installing , wait a couple of minutes 
 
-![airflow-progress](/in-progress.jpg)
+![airflow-progress](/in-progress.png)
 
 * You apache workspace has been successfully deployed
 
-![airflow-finsihed](/airflow-done.jpg)
+![airflow-finsihed](/airflow-done.png)
 
 ## Verify Apache installation
 
@@ -101,3 +103,5 @@ You successfully deployed an Apache webserver on IBM Cloud !
 [guide]: <https://github.com/KissConsult/clusterIBM>
 [here]: <https://github.com/KissConsult/IBM-Cloud-Block-Storage-plug-in>
 [resource groups]: <https://cloud.ibm.com/docs/account?topic=account-account_setup#bp_resourcegroups>
+[tags]: <https://cloud.ibm.com/docs/account?topic=account-tag>
+
