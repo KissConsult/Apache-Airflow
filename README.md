@@ -1,4 +1,4 @@
-# Get Apache on IBM Cloud
+# Get Apache Airflow on IBM Cloud
 
 [IBM Cloud] offers the most open and secure public cloud for business . 
 At the end of the tutorial you will have a cluster with a Apache Airflow up and runnning.
