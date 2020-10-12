@@ -63,7 +63,7 @@ We will deploy  Apache Airflow on our cluster
 
 * Click **install** - wait couple of minutes 
 
-![terminal-install](/terminal-install.jpg)
+![terminal-install](/terminal-install.png)
 
 * Click on **Actions**
 * Click **Web terminal** --> a terminal will open up
@@ -73,29 +73,25 @@ We will deploy  Apache Airflow on our cluster
  ```sh
 $ kubectl get ns
 ```
-![get-ns](/get-ns.jpg)
+![get-ns](/get-ns.png)
 
 
  ```sh
 $ kubectl get pod -n NAMESPACE -o wide 
 ```
-![get-pod](/get-pod.jpg)
+![get-pod](/get-pod.png)
 
 
  ```sh
 $ kubectl get service -n NAMESPACE
 ```
-![get-service](/get-service.jpg)
+![get-service](/get-service.png)
 
 
-* Running Apache service will be visible 
-* Copy the **External ip** , you can access the website on this IP
-* Paste it into your browser
-* Apache welcome message will be visible
+* Running Apache Airflow pods  will be visible 
 
-![works](/apache-works.png)
 
-You successfully deployed an Apache webserver on IBM Cloud ! 
+You successfully deployed an Apache Airflow on IBM Cloud ! 
 
 
 [IBM Cloud]: <http://cloud.ibm.com>
