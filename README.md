@@ -63,7 +63,7 @@ We will deploy  Apache Airflow on our cluster
 
 * Click **install** - wait couple of minutes 
 
-![terminal-install](/terminal-install.png)
+![terminal-install](/terminal-install.jpg)
 
 * Click on **Actions**
 * Click **Web terminal** --> a terminal will open up
@@ -100,4 +100,4 @@ You successfully deployed an Apache Airflow on IBM Cloud !
 [here]: <https://github.com/KissConsult/IBM-Cloud-Block-Storage-plug-in>
 [resource groups]: <https://cloud.ibm.com/docs/account?topic=account-account_setup#bp_resourcegroups>
 [tags]: <https://cloud.ibm.com/docs/account?topic=account-tag>
-
+[Resources]: <http://cloud.ibm.com/resources>
