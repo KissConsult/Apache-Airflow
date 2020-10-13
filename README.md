@@ -90,15 +90,15 @@ We will deploy  Apache Airflow on our cluster
 
 ![apache-tags](/details-tags.png)
 
-* Click on **Parameters with default values** , You can set deployment values or use the default ones
+* Click on **Parameters with default values**, You can set deployment values or use the default ones
 
 ![def-val](/parameters.png)
 
-* After finishing everything , **tick** the box next to the agreements and click **install**
+* After finishing everything, **tick** the box next to the agreements and click **install**
 
 ![Install](/aggreement-create.png)
 
-* The apache workspace will start installing , wait a couple of minutes 
+* The apache workspace will start installing, wait a couple of minutes 
 
 ![airflow-progress](/in-progress.png)
 
@@ -113,7 +113,7 @@ We will deploy  Apache Airflow on our cluster
 * Click on your Cluster
 ![Resourcelect](/resource-select.png)
 
-* Now you are at you clusters overview ,here Click on **Actions** and **Web terminal** from the dropdown menu
+* Now you are at you clusters overview, here Click on **Actions** and **Web terminal** from the dropdown menu
 
 
 ![Actions](/cluster-main.png)
@@ -125,7 +125,7 @@ We will deploy  Apache Airflow on our cluster
 * Click on **Actions**
 * Click **Web terminal** --> a terminal will open up
 
-* **Type** in the terminal , please change NAMESPACE to the namespace you choose at the deployment setup:
+* **Type** in the terminal, please change NAMESPACE to the namespace you choose at the deployment setup:
 
  ```sh
 $ kubectl get ns
@@ -146,7 +146,7 @@ $ kubectl get service -n NAMESPACE
 
 
 * Running Apache service will be visible 
-* Copy the **External ip** , you can access the website on this IP
+* Copy the **External ip**, you can access the website on this IP
 * Paste it into your browser
 * Apache welcome message will be visible
 
@@ -162,3 +162,8 @@ You successfully deployed an Apache webserver on IBM Cloud !
 [resource groups]: <https://cloud.ibm.com/docs/account?topic=account-account_setup#bp_resourcegroups>
 [tags]: <https://cloud.ibm.com/docs/account?topic=account-tag>
 [Resources]: <http://cloud.ibm.com/resources>
+[Locations]: <https://cloud.ibm.com/docs/containers?topic=containers-regions-and-zones#zones>
+[VRF]: <https://cloud.ibm.com/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud>
+[enable Vlan spanning]: <https://cloud.ibm.com/docs/vlans?topic=vlans-vlan-spanning#vlan-spanning>
+[endpoints]: <https://cloud.ibm.com/docs/account?topic=account-service-endpoints-overview>
+
