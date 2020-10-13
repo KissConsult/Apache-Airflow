@@ -86,7 +86,7 @@ We will deploy  Apache Airflow on our cluster
 
 ![apache-resource](/details-resource.png)
 
-* Give **tags** to your apache workspace, for more information visit [tags]
+* Give **tags** to your apache airflow workspace, for more information visit [tags]
 
 ![apache-tags](/details-tags.png)
 
@@ -98,11 +98,11 @@ We will deploy  Apache Airflow on our cluster
 
 ![Install](/aggreement-create.png)
 
-* The apache workspace will start installing, wait a couple of minutes 
+* The apache airflow workspace will start installing, wait a couple of minutes 
 
 ![airflow-progress](/in-progress.png)
 
-* You apache workspace has been successfully deployed
+* You apache airflow workspace has been successfully deployed
 
 ![airflow-finsihed](/airflow-done.png)
 
