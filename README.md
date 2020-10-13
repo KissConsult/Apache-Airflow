@@ -1,15 +1,72 @@
-# Get Apache Airflow on IBM Cloud
+# Get Apache on IBM Cloud
 
-[IBM Cloud] offers the most open and secure public cloud for business . 
-At the end of the tutorial you will have a cluster with a Apache Airflow up and runnning.
+You should have an IBM Cloud account, otherwise you can [register here].
+At the end of the tutorial you will have a cluster with  Apache Airflow up and runnning.
 
-## Prerequisites
+1. We will provision a new Kubernetes Cluster for you if, you already have one skip to step **2**
+2. We will deploy  the IBM Cloud Block Storage plug-in, if already have it skip to step **3**
+3. Apache Airflow deployment
 
-* You should have an IBM Cloud account , if not please [Register Here]
-* Have a running Kubernetes Cluster on the IBM Cloud, if you need help with provisioning one ,please follow this [guide] to get you started.
-* Have IBM Cloud Block Storage plug-in on you cluster, you can follow our guide for deploying the plug-in [here]
+## Step 1 provision Kubernetes Cluster
 
-## Deploying Apache Airflow
+* Click the **Catalog** button on the top 
+* Select **Service** from the catalog
+* Search for **Kubernetes Service** and click on it
+![Kubernetes](/kubernetes-select.png)
+* You are now at the Kubernetes deployment page ,you need to specify some details about the cluster 
+* Choose a plan **standard** or **free**, the free plan only has one worker node and no subnet, to provision a standard cluster, you will need to upgrade you account to Pay-As-You-Go 
+  * To upgrade to a Pay-As-You-Go account, complete the following steps:
+
+  * In the console, go to Manage > Account.
+  * Select Account settings, and click Add credit card.
+  * Enter your payment information, click Next, and submit your information
+* Choose **classic** or **VPC**, read the [docs] and choose the most suitable type for yourself 
+ ![VPC](/infra-select.png)
+* Now choose your location settings, for more information please visit [Locations]
+  * Choose **Geography** (continent)
+![continent](/location-geo.png)
+  * Choose **Single** or **Multizone**, in single zone your data is only kept in on datacenter, on the other hand with Multizone it is distributed to multiple zones, thus  safer in an unforseen zone failure 
+![avail](/location-avail.png)
+  * Choose a **Worker Zone** if using Single zones or **Metro** if Multizone
+ ![worker](/location-worker.png) 
+    * If you wish to use Multizone please set up your account with [VRF] or [enable Vlan spanning]
+    * If at your current location selection, there is no available Virtual LAN, a new Vlan will be created for you 
+ 
+* Choose a **Worker node setup** or use the preselected one, set **Worker node amount per zone**
+![worker-pool](/worker-pool.png)
+* Choose **Master Service Endpoint**,  In VRF-enabled accounts, you can choose private-only to make your master accessible on the private network or via VPN tunnel. Choose public-only to make your master publicly accessible. When you have a VRF-enabled account, your cluster is set up by default to use both private and public endpoints. For more information visit [endpoints].
+![endpoints](/endpoints.png)
+* Give cluster a **name**
+
+![name-new](/name-new.png)
+* Give desired **tags** to your cluster, for more information visit [tags]
+
+![tags-new](/tasg-new.png)
+* Click **create**
+![create-new](/create-new.png)
+
+* Wait for you cluster to be provisioned 
+![cluster-prepare](/cluster-prepare.png)
+* Your cluster is ready for usage 
+
+![cluster-ready](/cluster-done.png)
+
+## Step 2 deploy IBM Cloud Block Storage plug-in
+The Block Storage plug-in is a persistent, high-performance iSCSI storage that you can add to your apps by using Kubernetes Persistent Volumes (PVs).
+ 
+* Click the **Catalog** button on the top 
+* Select **Software** from the catalog
+* Search for **IBM Cloud Block Storage plug-in** and click on it
+![Block](/block-search.png)
+
+* On the application page Click in the _dot_ next to the cluster, you wish to use
+* Click on  **Enter or Select Namespace** and choose the default Namespace or use a custom one (if you get error please wait 30 minutes for the cluster to finalize)
+![block-c](/block-cluster.png)
+* Give a **name** to this workspace 
+* Click **install** and wait for the deployment
+![block-create](/block-storage-create.png)
+
+## Step 3 Deploy Apache Airflow
 
 We will deploy  Apache Airflow on our cluster 
   
@@ -19,17 +76,17 @@ We will deploy  Apache Airflow on our cluster
 ![Search](/search.png)
 
 
-* On the application page Click in the _dot_ next to the cluster , you wish to use
+* On the application page Click in the _dot_ next to the cluster, you wish to use
 ![Cluster](/cluster-select.png)
 * Click on  **Enter or Select Namespace** and choose the default Namespace or use a custom one 
 ![Namespace](/details-namespace.png)
-* Give a unique **name** to workspace , which you can easily recognize
+* Give a unique **name** to workspace, which you can easily recognize
 ![Name](/details-name.png)
-* Select which resource group you want to use , it's for access controll and billing purposes. For more information please visit [resource groups]
+* Select which resource group you want to use, it's for access controll and billing purposes. For more information please visit [resource groups]
 
 ![apache-resource](/details-resource.png)
 
-* Give **tags** to your apache workspace , for more information visit [tags]
+* Give **tags** to your apache workspace, for more information visit [tags]
 
 ![apache-tags](/details-tags.png)
 
@@ -73,25 +130,29 @@ We will deploy  Apache Airflow on our cluster
  ```sh
 $ kubectl get ns
 ```
-![get-ns](/get-ns.png)
+![get-ns](/get-ns.jpg)
 
 
  ```sh
 $ kubectl get pod -n NAMESPACE -o wide 
 ```
-![get-pod](/get-pod.png)
+![get-pod](/get-pod.jpg)
 
 
  ```sh
 $ kubectl get service -n NAMESPACE
 ```
-![get-service](/get-service.png)
+![get-service](/get-service.jpg)
 
 
-* Running Apache Airflow pods  will be visible 
+* Running Apache service will be visible 
+* Copy the **External ip** , you can access the website on this IP
+* Paste it into your browser
+* Apache welcome message will be visible
 
+![works](/apache-works.png)
 
-You successfully deployed an Apache Airflow on IBM Cloud ! 
+You successfully deployed an Apache webserver on IBM Cloud ! 
 
 
 [IBM Cloud]: <http://cloud.ibm.com>
