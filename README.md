@@ -166,4 +166,5 @@ You successfully deployed an Apache webserver on IBM Cloud !
 [VRF]: <https://cloud.ibm.com/docs/dl?topic=dl-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud>
 [enable Vlan spanning]: <https://cloud.ibm.com/docs/vlans?topic=vlans-vlan-spanning#vlan-spanning>
 [endpoints]: <https://cloud.ibm.com/docs/account?topic=account-service-endpoints-overview>
+[docs]: <https://cloud.ibm.com/docs/containers?topic=containers-infrastructure_providers>
 
