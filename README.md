@@ -130,19 +130,19 @@ We will deploy  Apache Airflow on our cluster
  ```sh
 $ kubectl get ns
 ```
-![get-ns](/get-ns.jpg)
+![get-ns](/get-ns.png)
 
 
  ```sh
 $ kubectl get pod -n NAMESPACE -o wide 
 ```
-![get-pod](/get-pod.jpg)
+![get-pod](/get-pod.png)
 
 
  ```sh
 $ kubectl get service -n NAMESPACE
 ```
-![get-service](/get-service.jpg)
+![get-service](/get-service.png)
 
 
 * Running Apache Airflow service will be visible 
