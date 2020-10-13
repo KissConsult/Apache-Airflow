@@ -83,6 +83,7 @@ In this step we will deploy Apache Airflow on our cluster
 * Click on  **Enter or Select Namespace** and choose one of the default Namespaces or use a custom one
 ![Namespace](/details-namespace.png)
 * Give a unique **name** to your workspace
+
 ![Name](/details-name.png)
 * Select which resource group you want to use, it is for access controll and billing purposes. For more information please visit [resource groups]
 
