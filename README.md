@@ -145,10 +145,10 @@ $ kubectl get service -n NAMESPACE
 ![get-service](/get-service.png)
 
 
-* Running Apache Airflow service will be visible 
+* Running Apache Airflow services will be visible 
 
 
-You successfully deployed an Apache Airflow on IBM Cloud! 
+You successfully deployed Apache Airflow on IBM Cloud! 
 
 
 [IBM Cloud]: <http://cloud.ibm.com>
